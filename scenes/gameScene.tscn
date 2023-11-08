@@ -1,0 +1,106 @@
+[gd_scene load_steps=7 format=3 uid="uid://bolvwvt63gb4n"]
+
+[ext_resource type="Script" path="res://scenes/gameScene.gd" id="1_4625r"]
+[ext_resource type="Theme" uid="uid://dciq88jjxuylq" path="res://font-themes/fileName.tres" id="1_dp3uh"]
+[ext_resource type="Theme" uid="uid://cps1uc48t6quu" path="res://font-themes/placeHolder.tres" id="2_80adq"]
+[ext_resource type="Theme" uid="uid://b8x4ek74uyodb" path="res://font-themes/defaultLabel.tres" id="2_cms8f"]
+[ext_resource type="Theme" uid="uid://dd1s4c7o3l5a4" path="res://font-themes/logTheme.tres" id="2_rhmrl"]
+[ext_resource type="Theme" uid="uid://bvxxj4j1458m4" path="res://themes/button.tres" id="6_1d6ya"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4625r")
+
+[node name="logMessage" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = 94.0
+offset_right = 352.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_rhmrl")
+text = "Label"
+horizontal_alignment = 1
+
+[node name="fileTitle" type="Label" parent="."]
+layout_mode = 1
+offset_left = 176.0
+offset_top = 30.0
+offset_right = 506.0
+offset_bottom = 97.0
+theme = ExtResource("1_dp3uh")
+text = "1-numGuess"
+
+[node name="instructionLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.731
+anchor_top = 0.475
+anchor_right = 0.731
+anchor_bottom = 0.475
+offset_left = -277.112
+offset_top = -23.8
+offset_right = 283.888
+offset_bottom = 23.2
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_cms8f")
+text = "Guess the number from 1-100"
+
+[node name="inputLineEdit" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.629
+anchor_top = 0.571
+anchor_right = 0.629
+anchor_bottom = 0.571
+offset_left = -157.608
+offset_top = -31.008
+offset_right = 183.392
+offset_bottom = 30.992
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_80adq")
+placeholder_text = "Guess a number"
+alignment = 1
+
+[node name="logTextEdit" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 117.0
+offset_right = 538.0
+offset_bottom = 636.0
+editable = false
+
+[node name="subButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 927.0
+offset_top = 339.0
+offset_right = 1120.0
+offset_bottom = 401.0
+theme = ExtResource("6_1d6ya")
+text = "Submit"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 33.0
+offset_right = 155.0
+offset_bottom = 90.0
+theme = ExtResource("6_1d6ya")
+text = "Back"
+
+[connection signal="text_submitted" from="inputLineEdit" to="." method="inputSubmit"]
+[connection signal="pressed" from="subButton" to="." method="buttonPressed"]
+[connection signal="pressed" from="Button" to="." method="back_pressed"]

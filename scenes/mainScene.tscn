@@ -1,0 +1,94 @@
+[gd_scene load_steps=6 format=3 uid="uid://bgb4ga2cebygd"]
+
+[ext_resource type="Script" path="res://scenes/mainScene.gd" id="1_0txv4"]
+[ext_resource type="Theme" uid="uid://dciq88jjxuylq" path="res://font-themes/fileName.tres" id="1_boya6"]
+[ext_resource type="FontFile" uid="uid://bog3i6i2ehglh" path="res://font-bundle/LateBloomers-Regular.otf" id="2_2a73c"]
+[ext_resource type="Theme" uid="uid://bvxxj4j1458m4" path="res://themes/button.tres" id="3_emk7d"]
+
+[sub_resource type="Theme" id="Theme_ybmvm"]
+default_font = ExtResource("2_2a73c")
+default_font_size = 33
+Label/colors/font_color = Color(0.886275, 0.929412, 0.8, 1)
+Label/colors/font_outline_color = Color(0.105882, 0.129412, 0.101961, 1)
+Label/constants/outline_size = 12
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0txv4")
+
+[node name="title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.255
+anchor_right = 0.5
+anchor_bottom = 0.255
+offset_left = -165.0
+offset_top = 48.76
+offset_right = 165.0
+offset_bottom = 115.76
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_boya6")
+text = "1-numGuess"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="subtitle" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.732
+anchor_right = 0.5
+anchor_bottom = 0.732
+offset_left = -333.0
+offset_top = -203.336
+offset_right = 333.0
+offset_bottom = -136.336
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ybmvm")
+text = "A simple number game by Ashtin"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="startButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -79.0
+offset_top = 53.0
+offset_right = 79.0
+offset_bottom = 111.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_emk7d")
+text = "Start"
+
+[node name="exitButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.5
+offset_top = 130.0
+offset_right = 50.5
+offset_bottom = 173.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_emk7d")
+theme_override_font_sizes/font_size = 26
+text = "Exit"
+
+[connection signal="pressed" from="startButton" to="." method="start_pressed"]
+[connection signal="pressed" from="exitButton" to="." method="exit_pressed"]

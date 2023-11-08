@@ -1,0 +1,33 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://dck1c5vpb60hb"
+path="res://.godot/imported/Brittanic London.otf-9adeb017b7764fe237a512167d911bd3.fontdata"
+
+[deps]
+
+source_file="res://font-bundle/Brittanic London.otf"
+dest_files=["res://.godot/imported/Brittanic London.otf-9adeb017b7764fe237a512167d911bd3.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

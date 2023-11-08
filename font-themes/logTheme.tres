@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dd1s4c7o3l5a4"]
+
+[ext_resource type="FontFile" uid="uid://bog3i6i2ehglh" path="res://font-bundle/LateBloomers-Regular.otf" id="1_6bhbk"]
+
+[resource]
+default_font = ExtResource("1_6bhbk")
+default_font_size = 28
+Label/colors/font_color = Color(0.741176, 0.435294, 0.478431, 1)
+Label/colors/font_outline_color = Color(0.411765, 0.215686, 0.215686, 0.639216)
+Label/constants/outline_size = 14
