@@ -12,3 +12,5 @@ Essentially, it's guess the number (1-100).
 - Basic UI
 - Basic Signal-method connections
 - Basic Scripting
+
+### To try out the app, check executables folder and download both .exe and .pck files to run the program
